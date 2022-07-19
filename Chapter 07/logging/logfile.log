@@ -1,0 +1,8 @@
+This is info
+Could not open the catalog for product 123321
+Traceback (most recent call last):
+  File "/Users/pmarquez/Books/backend-book-1/Code/chapter7/logging/python-text-logging.py", line 22, in findCatalog
+    openFileCatalog("catalog.xml")
+  File "/Users/pmarquez/Books/backend-book-1/Code/chapter7/logging/python-text-logging.py", line 18, in openFileCatalog
+    return open(file_name, 'r')
+FileNotFoundError: [Errno 2] No such file or directory: 'catalog.xml'

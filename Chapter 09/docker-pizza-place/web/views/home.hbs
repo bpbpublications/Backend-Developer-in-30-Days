@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Pizza Place</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+        }
+
+        h1 {
+            background-color: #d2f7ff;
+            margin: 0;
+            padding: 16px 40px;
+        }
+        main {
+            margin: 32px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .pizza-img {
+            box-shadow: 5px 5px 15px 5px #888888;
+        }
+        p {
+            padding-bottom: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Pizza Place!</h1>
+    <main>
+        <p>The best pizza in town! Come by and try our famous cheese pizza.</p>
+
+        <pre>
+            (Response provided by container {{app.system.os}})
+        </pre>
+        
+        <img class="pizza-img" src="/images/pizza.jpeg" width="800px">
+    </main>
+</body>
+</html>

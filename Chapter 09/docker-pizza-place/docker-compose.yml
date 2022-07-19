@@ -1,0 +1,20 @@
+version: '3.2'
+services:
+  webapp1:
+      build: ./web
+      tty: true
+  webapp2:
+      build: ./web
+      tty: true
+  webapp3:
+      build: ./web
+      tty: true
+  lb:
+      build: ./nginx
+      tty: true
+      links:
+          - webapp1
+          - webapp2
+          - webapp3
+      ports:
+          - '8080:8080'

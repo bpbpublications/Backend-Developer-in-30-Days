@@ -1,0 +1,14 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = 'hello.Application'
+
+repositories { 
+    mavenCentral() 
+}
+
+dependencies {
+    implementation "joda-time:joda-time:2.2"
+    implementation "com.google.guava:guava:19.0"
+    testImplementation "junit:junit:4.12"
+}

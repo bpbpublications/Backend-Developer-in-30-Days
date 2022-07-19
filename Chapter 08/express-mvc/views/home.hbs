@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Example App</title>
+</head>
+<body>
+    <h1>Order name: {{order.orderName}}</h1>
+    
+    <ul>
+        {{#each order.ingredients as |ingredient|}}
+            <li>{{ingredient}}</li>
+        {{/each}}
+    </ul>
+</body>
+</html>

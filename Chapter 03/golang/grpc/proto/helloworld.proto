@@ -1,0 +1,12 @@
+syntax = "proto3";
+package helloworld;
+option go_package = "models/helloworld";
+option java_package = "com.example.grpc";
+
+message Message {
+  string body = 1;
+}
+
+service HelloService {
+  rpc SayHello(Message) returns (Message) {}
+}

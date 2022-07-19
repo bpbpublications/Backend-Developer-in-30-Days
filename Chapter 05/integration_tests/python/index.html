@@ -1,0 +1,97 @@
+<head>
+  <title>Report Generator</title>
+</head>
+
+<style>
+  .hidden {
+    visibility: hidden;
+  }
+  body {
+    color: #2e2e2e;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-variant: normal;
+  }
+
+  h1 {
+    margin-top: 2em;
+    text-align: center;
+  }
+
+  main {
+    margin: 0 auto;
+    width: 70%;
+  }
+
+  table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    width: 100%;
+  }
+
+  thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+  }
+
+  th,
+  td {
+    padding: 10px;
+  }
+</style>
+
+<body>
+  <h1>Welcome to the report generator</h1>
+  <main>
+    <form>
+      <label>
+        Find reports for company:
+        <input id="company-search-field" />
+      </label>
+      <button id="search-button" type="button">Search</button>
+    </form>
+
+    <div id="report-table" class="hidden">
+      <span>Found 2 results:</span>
+      <table>
+        <thead>
+          <tr>
+            <th>Company</th>
+            <th>Monthly Income (1000)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Company 1 Co.</td>
+            <td>$100</td>
+          </tr>
+          <tr>
+            <td>Company 1 Co.</td>
+            <td>$80</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td>Sum</td>
+            <td>$180</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </main>
+</body>
+
+<script>
+  const reportTable = document.querySelector("#report-table");
+  document
+    .querySelector("#search-button")
+    .addEventListener("click", function (ev) {
+      reportTable.classList.remove("hidden");
+    });
+</script>
